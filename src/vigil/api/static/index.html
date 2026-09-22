@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vigil — Anticipatory Safety Agent</title>
+  <meta name="description" content="Vigil investigates the seconds before an industrial accident, using NVIDIA open models on Nebius." />
+  <meta property="og:title" content="Vigil — See the accident before it happens" />
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">NEBIUS × NVIDIA · GLOBAL AI HACKATHON</p>
+        <h1>See the accident <span>before</span> it happens.</h1>
+        <p class="lede">Vigil is an evidence-first near-miss investigator. It scans CCTV, forms a hypothesis, goes back to the critical seconds, checks site rules, and tells a human what to do next.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-row">
+          <span id="modeBadge" class="badge demo">DEMO</span>
+          <button id="modeToggle" class="quiet" type="button">Switch to LIVE</button>
+        </div>
+        <p id="modeCopy">Scripted backends prove the complete agent workflow. They are not a model benchmark.</p>
+        <div id="providerLine" class="provider">Checking Nebius availability…</div>
+      </div>
+    </header>
+
+    <section class="control-grid">
+      <article class="panel case-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="kicker">01 · FOOTAGE</p>
+            <h2>Select a camera event</h2>
+          </div>
+          <span id="sampleCount" class="count">—</span>
+        </div>
+        <select id="sampleSelect" aria-label="Select sample footage"></select>
+        <div class="video-wrap">
+          <video id="video" controls muted playsinline preload="metadata"></video>
+          <div class="scanline"></div>
+          <div class="video-label"><span class="dot"></span><span id="cameraLabel">CAMERA</span></div>
+        </div>
+        <div class="meta-row" id="sampleMeta"></div>
+        <button id="runButton" class="primary" type="button">Investigate the next few seconds</button>
+      </article>
+
+      <article class="panel status-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="kicker">02 · VERDICT</p>
+            <h2 id="headline">Ready for an investigation</h2>
+          </div>
+          <span id="riskPill" class="risk-pill neutral">— / 20</span>
+        </div>
+        <p id="summary" class="summary">Choose a clip and run Vigil. The dashboard will show the model provenance and every investigation step instead of hiding the reasoning path.</p>
+        <div class="metric-grid">
+          <div class="metric"><span>Warning lead</span><strong id="leadTime">—</strong></div>
+          <div class="metric"><span>Findings</span><strong id="findings">—</strong></div>
+          <div class="metric"><span>Agent steps</span><strong id="steps">—</strong></div>
+          <div class="metric"><span>Latency</span><strong id="latency">—</strong></div>
+        </div>
+        <div class="callout" id="actionBox">
+          <span>HUMAN ACTION</span>
+          <strong id="actionText">No recommendation yet.</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="evidence-grid">
+      <article class="panel">
+        <div class="panel-heading compact"><div><p class="kicker">03 · EVIDENCE</p><h2>Investigation trace</h2></div></div>
+        <ol id="traceList" class="trace-list"><li class="placeholder">Trace appears after the run.</li></ol>
+      </article>
+      <article class="panel">
+        <div class="panel-heading compact"><div><p class="kicker">04 · ACCOUNTABILITY</p><h2>Rules & model provenance</h2></div></div>
+        <div id="rules" class="rules"><p class="placeholder">No citations yet.</p></div>
+        <dl id="provenance" class="provenance"></dl>
+      </article>
+    </section>
+
+    <section class="panel disclosure">
+      <div>
+        <p class="kicker">EVALUATION INTEGRITY</p>
+        <h2>Demo is a workflow proof, not an accuracy claim.</h2>
+      </div>
+      <p>Vigil intentionally refuses to label its deterministic demo as measured performance. Live accuracy is produced only by <code>vigil eval --perception nebius --reasoning nebius</code>, against the bundled ground truth.</p>
+    </section>
+
+    <footer>
+      <span>Vigil · Decision support only</span>
+      <a href="/docs" target="_blank" rel="noreferrer">OpenAPI</a>
+    </footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

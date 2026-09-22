@@ -1,0 +1,388 @@
+{
+  "_about": "Safety rule corpus used for retrieval and citation. Every 'text' field is Vigil's paraphrase unless 'paraphrase': false. Subsection numbers are given only where they are stable and well-established; otherwise the citation names the standard and the subject, because an invented 29 CFR subsection would make a report look authoritative while being wrong. Swap in a site rulebook or a KOSHA-anchored set by dropping another JSON file in this directory.",
+  "rules": [
+    {
+      "id": "osha-1910-178-travel",
+      "source": "29 CFR 1910.178(m)-(n) (powered industrial trucks: travel and operations)",
+      "title": "Clear view and warning at blind points",
+      "text": "A truck must be operated at a speed that allows safe stopping, with the driver maintaining a clear view of the path of travel. Drivers must slow down and sound the warning horn at intersections, blind spots, and any point where pedestrians may be present.",
+      "tags": [
+        "forklift",
+        "powered industrial truck",
+        "blind corner",
+        "horn",
+        "sightline",
+        "speed",
+        "struck by"
+      ],
+      "severity_floor": 4,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by",
+        "struck_by_reversing_vehicle"
+      ]
+    },
+    {
+      "id": "osha-1910-178-pedestrians",
+      "source": "29 CFR 1910.178(m)(7) (powered industrial trucks: pedestrian safety)",
+      "title": "Extra caution near pedestrians",
+      "text": "Drivers must exercise extra caution regarding the proximity of the truck to pedestrians, must not drive up to or across a pedestrian in the path, and pedestrians must not be allowed to stand or pass under the elevated portion of a truck.",
+      "tags": [
+        "forklift",
+        "pedestrian",
+        "proximity",
+        "struck by",
+        "vulnerable party"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by"
+      ]
+    },
+    {
+      "id": "site-no-riders-on-trucks",
+      "source": "29 CFR 1910.178 (powered industrial trucks) read with ANSI/ITSDF B56.1 on lifting personnel",
+      "title": "No rider on the tines, and no personnel lift without an approved platform",
+      "text": "No person may be carried on the forks, the load backrest or the chassis of a lift truck, and no one may be raised on a work platform unless the truck is specifically fitted and approved for lifting personnel with the platform secured to the carriage and the operator seated with the restraint fastened. Standing or passing under an elevated load or carriage is prohibited.",
+      "tags": [
+        "forklift",
+        "rider",
+        "personnel platform",
+        "elevated tines",
+        "harness",
+        "fall from height",
+        "struck by",
+        "powered industrial truck"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "worker_riding_on_forks",
+        "fall_from_height"
+      ]
+    },
+    {
+      "id": "osha-1910-176-aisles",
+      "source": "29 CFR 1910.176(d) (materials handling: aisles and passageways)",
+      "title": "Marked, unobstructed pedestrian aisles",
+      "text": "Permanent aisles and passageways must be appropriately marked and kept clear of obstruction, with sufficient clearance for the equipment that uses them.",
+      "tags": [
+        "aisle",
+        "walkway",
+        "marking",
+        "obstruction",
+        "egress",
+        "pedestrian",
+        "separation"
+      ],
+      "severity_floor": 3,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by",
+        "slip_trip"
+      ]
+    },
+    {
+      "id": "osha-1910-176-storage",
+      "source": "29 CFR 1910.176(a) (materials handling: storage)",
+      "title": "Storage must not create a hazard",
+      "text": "Storage of material must not create a hazard. Bags, containers, barrels and similar units stored in tiers must be stacked, blocked, interlocked and limited in height so that they are stable and secure against sliding or collapse.",
+      "tags": [
+        "stacking",
+        "storage",
+        "collapse",
+        "falling object",
+        "racking",
+        "stability"
+      ],
+      "severity_floor": 4,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by_falling_object"
+      ]
+    },
+    {
+      "id": "osha-1910-22-surfaces",
+      "source": "29 CFR 1910.22(a) (walking-working surfaces: general requirements)",
+      "title": "Floors kept clean, dry and hazard-free",
+      "text": "Walking-working surfaces must be kept clean, orderly and sanitary, and maintained in a safe condition free of hazards such as spills, protruding nails, splinters, loose boards and grease. Where wet conditions exist, non-slip footwear or protective floor coverings must be provided.",
+      "tags": [
+        "slip",
+        "trip",
+        "spill",
+        "wet floor",
+        "housekeeping",
+        "walkway",
+        "fall level"
+      ],
+      "severity_floor": 3,
+      "paraphrase": true,
+      "hazards": [
+        "slip_trip"
+      ]
+    },
+    {
+      "id": "osha-1910-28-four-feet",
+      "source": "29 CFR 1910.28(b)(1) (walking-working surfaces: duty to have fall protection)",
+      "title": "Fall protection at four feet or more",
+      "text": "In general industry, each unprotected side or edge of a walking-working surface 4 feet (1.2 m) or more above a lower level must be protected by a guardrail system, safety net system, personal fall arrest system, or an equivalent access to a controlled work area.",
+      "tags": [
+        "fall from height",
+        "leading edge",
+        "guardrail",
+        "harness",
+        "platform",
+        "mezzanine"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "fall_from_height"
+      ]
+    },
+    {
+      "id": "osha-1910-29-guardrail",
+      "source": "29 CFR 1910.29(b) (fall protection systems criteria: guardrail systems)",
+      "title": "Guardrail construction criteria",
+      "text": "Guardrail systems must have a top rail at approximately 42 inches above the walking surface, a mid rail or equivalent intermediate member, and must be capable of withstanding at least 200 pounds of force applied within 2 inches of the top edge in any downward or outward direction.",
+      "tags": [
+        "guardrail",
+        "toprail",
+        "midrail",
+        "opening",
+        "gap",
+        "leading edge",
+        "fall from height"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "fall_from_height"
+      ]
+    },
+    {
+      "id": "osha-1910-23-ladders",
+      "source": "29 CFR 1910.23(b) (ladders: general requirements)",
+      "title": "Ladder use limits",
+      "text": "Ladders must be used only for the purpose for which they were designed. The top step and cap of a stepladder must not be used as a means of support, and a portable ladder must extend at least 3 feet above the landing where access is provided by the ladder.",
+      "tags": [
+        "ladder",
+        "stepladder",
+        "top step",
+        "overreach",
+        "fall from height",
+        "three points of contact"
+      ],
+      "severity_floor": 4,
+      "paraphrase": true,
+      "hazards": [
+        "fall_from_height"
+      ]
+    },
+    {
+      "id": "osha-1910-132-ppe",
+      "source": "29 CFR 1910.132(d) (personal protective equipment: use and assessment)",
+      "title": "Assessed PPE must actually be worn",
+      "text": "The employer must assess the workplace to determine whether hazards are present that necessitate PPE, select and require the use of appropriate PPE on affected employees, and ensure that each employee uses it.",
+      "tags": [
+        "ppe",
+        "hi vis",
+        "high visibility",
+        "hard hat",
+        "harness",
+        "protective equipment"
+      ],
+      "severity_floor": 3,
+      "paraphrase": true,
+      "hazards": [
+        "fall_from_height",
+        "struck_by",
+        "struck_by_falling_object",
+        "slip_trip"
+      ]
+    },
+    {
+      "id": "ansi-isea-107",
+      "source": "ANSI/ISEA 107 (high-visibility safety apparel, referenced by OSHA for worker visibility)",
+      "title": "High-visibility apparel where workers share space with traffic",
+      "text": "Workers exposed to moving vehicles or equipment on site must wear high-visibility safety apparel meeting the relevant performance class for the traffic speed and task separation distance.",
+      "tags": [
+        "hi vis",
+        "high visibility",
+        "night",
+        "lighting",
+        "pedestrian",
+        "struck by",
+        "ppe"
+      ],
+      "severity_floor": 4,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by"
+      ]
+    },
+    {
+      "id": "osha-1910-145-marking",
+      "source": "29 CFR 1910.145(c)-(f) (specifications for accident prevention signs and tags)",
+      "title": "Hazards must be marked while they exist",
+      "text": "Signs, tags and barricades must be used to identify and warn of hazards that are not immediately corrected, and must remain in place for as long as the hazard exists. A 'Caution' designation applies where the hazard may result in minor to moderate injury.",
+      "tags": [
+        "cone",
+        "barricade",
+        "sign",
+        "tag",
+        "warning",
+        "spill",
+        "unmarked hazard"
+      ],
+      "severity_floor": 3,
+      "paraphrase": true,
+      "hazards": [
+        "slip_trip",
+        "fall_from_height",
+        "struck_by_falling_object"
+      ]
+    },
+    {
+      "id": "osha-1910-147-loto",
+      "source": "29 CFR 1910.147(c) (the control of hazardous energy: lockout/tagout)",
+      "title": "Isolate energy before clearing a jam or servicing",
+      "text": "Energy isolating procedures must be applied, and machines rendered inoperable, before any employee removes or bypasses a guard or places any part of the body into a machine where the unexpected energisation or start-up of equipment could cause injury.",
+      "tags": [
+        "lockout",
+        "tagout",
+        "conveyor",
+        "nip point",
+        "jam",
+        "servicing",
+        "caught between"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "caught_between"
+      ]
+    },
+    {
+      "id": "osha-1910-212-guarding",
+      "source": "29 CFR 1910.212(a)(1) (machines and machinery: general requirements)",
+      "title": "Guards over rotating and in-running points",
+      "text": "One or more methods of machine guarding must protect operators and other employees from hazards including those created by point of operation, in-running nip points, rotating parts and flying chips or sparks.",
+      "tags": [
+        "guard",
+        "nip point",
+        "conveyor",
+        "rotating",
+        "entanglement",
+        "caught between",
+        "loose clothing"
+      ],
+      "severity_floor": 5,
+      "paraphrase": true,
+      "hazards": [
+        "caught_between"
+      ]
+    },
+    {
+      "id": "site-pedestrian-crossing",
+      "source": "Northgate Logistics site rulebook, section 4.2 (pedestrian / machine traffic)",
+      "title": "Stop, look, make eye contact before crossing a machine lane",
+      "text": "Pedestrians must stop at the marked crossing point, look in both directions and obtain positive acknowledgement from the equipment operator before entering a machine lane. Crossing anywhere other than a marked point is prohibited.",
+      "tags": [
+        "crossing",
+        "machine lane",
+        "walkway",
+        "eye contact",
+        "struck by",
+        "forklift"
+      ],
+      "severity_floor": 4,
+      "paraphrase": false,
+      "hazards": [
+        "struck_by"
+      ]
+    },
+    {
+      "id": "site-reversing-banksman",
+      "source": "Northgate Logistics site rulebook, section 4.6 (vehicle manoeuvring)",
+      "title": "Reversing requires a banksman or a barricaded zone",
+      "text": "No vehicle may reverse in an operational yard or dock unless either a trained banksman is directing the manoeuvre from a position visible to the driver, or the reversing path has been physically barricaded against pedestrian entry.",
+      "tags": [
+        "reversing",
+        "banksman",
+        "spotter",
+        "dock",
+        "yard",
+        "blind zone",
+        "struck by"
+      ],
+      "severity_floor": 5,
+      "paraphrase": false,
+      "hazards": [
+        "struck_by_reversing_vehicle"
+      ]
+    },
+    {
+      "id": "site-spill-response",
+      "source": "Northgate Logistics site rulebook, section 6.1 (spill response)",
+      "title": "Cone within two minutes, clean within fifteen",
+      "text": "Any liquid spill on a walking or working surface must be isolated with cones or barriers within two minutes of being noticed, and cleaned or absorbed within fifteen minutes. Until isolated, the area must be continuously watched.",
+      "tags": [
+        "spill",
+        "cone",
+        "isolate",
+        "wet floor",
+        "slip",
+        "response time",
+        "unmarked"
+      ],
+      "severity_floor": 3,
+      "paraphrase": false,
+      "hazards": [
+        "slip_trip"
+      ]
+    },
+    {
+      "id": "site-lighting",
+      "source": "Northgate Logistics site rulebook, section 7.3 (illumination)",
+      "title": "Minimum illumination on traffic routes",
+      "text": "Pedestrian routes and machine traffic routes must be lit to at least 50 lux at floor level; where that cannot be maintained, every person exposed to traffic on that route must wear high-visibility apparel of at least Class 2.",
+      "tags": [
+        "lighting",
+        "lux",
+        "night",
+        "visibility",
+        "hi vis",
+        "traffic route"
+      ],
+      "severity_floor": 3,
+      "paraphrase": false,
+      "hazards": [
+        "struck_by",
+        "slip_trip"
+      ]
+    },
+    {
+      "id": "eu-89-654-workplace",
+      "source": "EU Directive 89/654/EEC Annex, points 2.2-2.3 (minimum workplace requirements)",
+      "title": "Separate traffic routes and visible warnings",
+      "text": "Workplaces must be organised so that pedestrians and vehicles can circulate in safety, with routes that are clearly indicated and whose width and visibility are appropriate to the means of transport in use; doors and exits used by vehicles must be kept clear.",
+      "tags": [
+        "segregation",
+        "traffic route",
+        "pedestrian",
+        "vehicle",
+        "marking",
+        "europe",
+        "warehouse"
+      ],
+      "severity_floor": 3,
+      "paraphrase": true,
+      "hazards": [
+        "struck_by",
+        "slip_trip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "clip_id": "reversing_dock_no_spotter",
+  "title": "Reversing vehicle, no banksman",
+  "path": "reversing_dock_no_spotter.mp4",
+  "duration_s": 11.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-07 / DOCK-2",
+  "scene": {
+    "area_type": "loading_dock",
+    "lighting": "low",
+    "surface": "dry_clear"
+  },
+  "hazards": [
+    {
+      "type": "struck_by_reversing_vehicle",
+      "t_start": 3.6,
+      "t_impact": 7.0,
+      "anticipatable_s": 3.4,
+      "severity": 5,
+      "entities": [
+        "P1",
+        "V1"
+      ],
+      "description": "Rigid vehicle is reversing toward the camera along x=3.0: its rear plane moves from 4.45 m out to 3.20 m out over the first 7 s. The worker enters that corridor at 3.6 m and walks into the swept line, so contact lands at about 7.0 s. No banksman is in shot and the reversing path is not barricaded, so nothing breaks the sequence."
+    }
+  ],
+  "notes": "Rear-sight blind zone; audit-relevant because segregation is absent."
+}

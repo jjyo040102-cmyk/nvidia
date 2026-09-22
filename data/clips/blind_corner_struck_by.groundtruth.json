@@ -1,0 +1,33 @@
+{
+  "clip_id": "blind_corner_struck_by",
+  "title": "Struck-by at blind corner",
+  "path": "blind_corner_struck_by.mp4",
+  "duration_s": 10.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-03 / BAY-3",
+  "scene": {
+    "area_type": "warehouse",
+    "lighting": "typical_indoor",
+    "surface": "dry_clear"
+  },
+  "hazards": [
+    {
+      "type": "struck_by",
+      "t_start": 3.3,
+      "t_impact": 6.9,
+      "anticipatable_s": 3.6,
+      "severity": 5,
+      "entities": [
+        "P1",
+        "FL1"
+      ],
+      "description": "Worker leaves the marked walkway and crosses the machine lane at y=3.5 while an unloaded forklift travels toward the same point; pillar S1 blocks the operator's sightline until the last ~1.5 m. Contact at approximately 6.9 s."
+    }
+  ],
+  "notes": "High-visibility clothing absent, which compounds the occlusion."
+}

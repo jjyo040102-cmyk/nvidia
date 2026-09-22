@@ -1,0 +1,20 @@
+{
+  "clip_id": "control_housekeeping",
+  "title": "Control -- housekeeping, no live conflict",
+  "path": "control_housekeeping.mp4",
+  "duration_s": 11.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-09 / STORE-2",
+  "scene": {
+    "area_type": "production_floor",
+    "lighting": "typical_indoor",
+    "surface": "dry_clear"
+  },
+  "hazards": [],
+  "notes": "Clutter, cones and a shared aisle invite a false positive. The powered traffic is parked and both workers stay on their own side of the store."
+}

@@ -1,0 +1,34 @@
+# python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# secrets -- the whole privacy pitch depends on never committing a key
+.env
+.env.*
+!.env.example
+*.key
+credentials.json
+
+# generated artifacts
+artifacts/
+*.log
+.coverage
+htmlcov/
+site/
+
+# media scratch -- sample clips ARE committed so `vigil demo` works on a fresh clone
+data/clips/tmp/
+web/assets/recorded/
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

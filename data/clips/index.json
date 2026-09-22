@@ -1,0 +1,241 @@
+[
+  {
+    "clip_id": "blind_corner_struck_by",
+    "title": "Struck-by at blind corner",
+    "path": "blind_corner_struck_by.mp4",
+    "duration_s": 10.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-03 / BAY-3",
+    "scene": {
+      "area_type": "warehouse",
+      "lighting": "typical_indoor",
+      "surface": "dry_clear"
+    },
+    "hazards": [
+      {
+        "type": "struck_by",
+        "t_start": 3.3,
+        "t_impact": 6.9,
+        "anticipatable_s": 3.6,
+        "severity": 5,
+        "entities": [
+          "P1",
+          "FL1"
+        ],
+        "description": "Worker leaves the marked walkway and crosses the machine lane at y=3.5 while an unloaded forklift travels toward the same point; pillar S1 blocks the operator's sightline until the last ~1.5 m. Contact at approximately 6.9 s."
+      }
+    ],
+    "notes": "High-visibility clothing absent, which compounds the occlusion."
+  },
+  {
+    "clip_id": "reversing_dock_no_spotter",
+    "title": "Reversing vehicle, no banksman",
+    "path": "reversing_dock_no_spotter.mp4",
+    "duration_s": 11.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-07 / DOCK-2",
+    "scene": {
+      "area_type": "loading_dock",
+      "lighting": "low",
+      "surface": "dry_clear"
+    },
+    "hazards": [
+      {
+        "type": "struck_by_reversing_vehicle",
+        "t_start": 3.6,
+        "t_impact": 7.0,
+        "anticipatable_s": 3.4,
+        "severity": 5,
+        "entities": [
+          "P1",
+          "V1"
+        ],
+        "description": "Rigid vehicle is reversing toward the camera along x=3.0: its rear plane moves from 4.45 m out to 3.20 m out over the first 7 s. The worker enters that corridor at 3.6 m and walks into the swept line, so contact lands at about 7.0 s. No banksman is in shot and the reversing path is not barricaded, so nothing breaks the sequence."
+      }
+    ],
+    "notes": "Rear-sight blind zone; audit-relevant because segregation is absent."
+  },
+  {
+    "clip_id": "unmarked_spill_slip",
+    "title": "Unmarked spill in a walking route",
+    "path": "unmarked_spill_slip.mp4",
+    "duration_s": 12.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-11 / LINE-4",
+    "scene": {
+      "area_type": "production_floor",
+      "lighting": "typical_indoor",
+      "surface": "wet"
+    },
+    "hazards": [
+      {
+        "type": "slip_trip",
+        "t_start": 4.2,
+        "t_impact": 8.6,
+        "anticipatable_s": 4.4,
+        "severity": 3,
+        "entities": [
+          "P1",
+          "SP1"
+        ],
+        "description": "Hydraulic fluid sheen spans the walkway at y=4.3 and no cone is in place until 9.4 s, after the operator has already crossed it at 8.6 s."
+      }
+    ],
+    "notes": "Tests whether the model reasons about an uncorrected condition over time, not just object presence."
+  },
+  {
+    "clip_id": "ladder_overreach_fall",
+    "title": "Overreaching from a stepladder",
+    "path": "ladder_overreach_fall.mp4",
+    "duration_s": 12.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-02 / STAGE-1",
+    "scene": {
+      "area_type": "warehouse",
+      "lighting": "backlit_or_glare",
+      "surface": "dry_clear"
+    },
+    "hazards": [
+      {
+        "type": "fall_from_height",
+        "t_start": 6.2,
+        "t_impact": 9.4,
+        "anticipatable_s": 3.2,
+        "severity": 4,
+        "entities": [
+          "P1",
+          "L1"
+        ],
+        "description": "Occupied on the top platform at 1.51 m, which 29 CFR 1910.23 forbids as a means of support; from 6.2 s he shifts to the edge of the deck and reaches 0.8 m clear of the stiles for a crate with no third point of contact, while the ladder base is neither footed nor tied off. The overturning moment grows until about 9.4 s."
+      }
+    ],
+    "notes": "Fall direction is toward the stacked crates, which also creates a striking hazard below."
+  },
+  {
+    "clip_id": "night_no_hivis_pedestrian",
+    "title": "Night shift, no hi-vis, shared route",
+    "path": "night_no_hivis_pedestrian.mp4",
+    "duration_s": 10.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-14 / YARD-N",
+    "scene": {
+      "area_type": "vehicle_yard",
+      "lighting": "night_artificial",
+      "surface": "dry_clear"
+    },
+    "hazards": [
+      {
+        "type": "struck_by",
+        "t_start": 3.9,
+        "t_impact": 6.6,
+        "anticipatable_s": 2.7,
+        "severity": 4,
+        "entities": [
+          "P1",
+          "FL1"
+        ],
+        "description": "Elevated load restricts the operator's forward view while a worker without hi-vis crosses the travel route at 4.1 m under sodium-only lighting."
+      }
+    ],
+    "notes": "Raised load plus absent hi-vis: the model must combine two weak cues."
+  },
+  {
+    "clip_id": "ride_on_forks",
+    "title": "Worker carried on the elevated tines",
+    "path": "ride_on_forks.mp4",
+    "duration_s": 11.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-06 / AISLE-B",
+    "scene": {
+      "area_type": "warehouse",
+      "lighting": "typical_indoor",
+      "surface": "dry_clear"
+    },
+    "hazards": [
+      {
+        "type": "worker_riding_on_forks",
+        "t_start": 4.0,
+        "t_impact": 8.0,
+        "anticipatable_s": 4.0,
+        "severity": 5,
+        "entities": [
+          "P1",
+          "P2",
+          "FL1"
+        ],
+        "description": "A worker is carried on the tines at 0.95 m with no platform and no tether while the truck travels toward the camera along x=1.10. From 4.0 s a second worker crosses the same lane at 3.30 m; the elevated load path and the pedestrian meet at about 8.0 s, so both a fall from height and a struck-by are live on the same trajectory."
+      }
+    ],
+    "notes": "Two exposures, one cause: stopping the travel ends both. Tests whether the agent reports the riding violation rather than only the converging paths."
+  },
+  {
+    "clip_id": "control_walkway_discipline",
+    "title": "Control -- same bay, walkway respected",
+    "path": "control_walkway_discipline.mp4",
+    "duration_s": 10.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-03 / BAY-3",
+    "scene": {
+      "area_type": "warehouse",
+      "lighting": "typical_indoor",
+      "surface": "dry_clear"
+    },
+    "hazards": [],
+    "notes": "Matched control for blind_corner_struck_by. Everything a detector would key on is present -- forklift, pillar, workers, low-vis -- but nobody leaves the walkway, so a correct system stays quiet."
+  },
+  {
+    "clip_id": "control_housekeeping",
+    "title": "Control -- housekeeping, no live conflict",
+    "path": "control_housekeeping.mp4",
+    "duration_s": 11.0,
+    "fps": 12,
+    "resolution": [
+      1280,
+      720
+    ],
+    "synthetic": true,
+    "camera_label": "CAM-09 / STORE-2",
+    "scene": {
+      "area_type": "production_floor",
+      "lighting": "typical_indoor",
+      "surface": "dry_clear"
+    },
+    "hazards": [],
+    "notes": "Clutter, cones and a shared aisle invite a false positive. The powered traffic is parked and both workers stay on their own side of the store."
+  }
+]

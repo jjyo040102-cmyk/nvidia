@@ -1,0 +1,33 @@
+{
+  "clip_id": "ladder_overreach_fall",
+  "title": "Overreaching from a stepladder",
+  "path": "ladder_overreach_fall.mp4",
+  "duration_s": 12.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-02 / STAGE-1",
+  "scene": {
+    "area_type": "warehouse",
+    "lighting": "backlit_or_glare",
+    "surface": "dry_clear"
+  },
+  "hazards": [
+    {
+      "type": "fall_from_height",
+      "t_start": 6.2,
+      "t_impact": 9.4,
+      "anticipatable_s": 3.2,
+      "severity": 4,
+      "entities": [
+        "P1",
+        "L1"
+      ],
+      "description": "Occupied on the top platform at 1.51 m, which 29 CFR 1910.23 forbids as a means of support; from 6.2 s he shifts to the edge of the deck and reaches 0.8 m clear of the stiles for a crate with no third point of contact, while the ladder base is neither footed nor tied off. The overturning moment grows until about 9.4 s."
+    }
+  ],
+  "notes": "Fall direction is toward the stacked crates, which also creates a striking hazard below."
+}

@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vigil"
+version = "0.1.0"
+description = "Anticipatory physical-safety agent: predicts incidents before they happen using NVIDIA open models on Nebius."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Vigil" }]
+keywords = ["nvidia", "nebius", "physical-ai", "safety", "agent", "cosmos", "nemotron"]
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.32",
+  "pydantic>=2.9",
+  "pydantic-settings>=2.6",
+  "httpx>=0.27",
+  "numpy>=1.26",
+  # >=12 ships inline types (py.typed). Third-party types-Pillow stubs are frozen at the
+  # 10.2 API and shadow them, which reports errors against signatures we do not run.
+  "pillow>=12.0",
+  "typer>=0.12",
+  "python-multipart>=0.0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "pytest-asyncio>=0.24",
+  "pytest-cov>=5.0",
+  "respx>=0.21",
+  "ruff>=0.7",
+  "mypy>=1.13",
+]
+media = ["edge-tts>=6.1", "playwright>=1.48"]
+cosmos = [
+  "torch>=2.5",
+  # This module calls the 4.x ``from_pretrained(torch_dtype=..., load_in_4bit=...)`` signature.
+  # transformers 5 renamed those kwargs, and a TypeError there would surface as a load failure
+  # this module can only describe as "check the licence" -- the wrong fix to print.
+  "transformers>=4.52,<5",
+  "accelerate>=1.0",
+  # 4-bit/8-bit loading has no backend without it. It ships win_amd64 wheels now, so the
+  # Windows exclusion that used to sit on this line is gone.
+  "bitsandbytes>=0.45",
+]
+
+[project.scripts]
+vigil = "vigil.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vigil"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "ARG", "PTH", "C4", "PT"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# Test stubs keep the signature of the method they replace, so an unused argument is the point:
+# a `survey` override that ignores `clip` still has to look like `survey`. Ruff would accept
+# `_clip`, but mirroring the real parameter names is what makes the stub a readable stand-in.
+# Same one level down for lambdas: httpx.MockTransport always calls the handler with a request,
+# so a fake that answers without reading it still has to bind the name.
+"tests/**" = ["ARG002", "ARG005"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+plugins = ["pydantic.mypy"]
+mypy_path = "src"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# Pinned explicitly: pytest-asyncio warns when it is unset, and ``filterwarnings = error``
+# below turns that warning into a failure on every async test.
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+addopts = "-q --strict-markers --cov=vigil --cov-report=term-missing"
+filterwarnings = ["error"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true

@@ -1,0 +1,20 @@
+{
+  "clip_id": "control_walkway_discipline",
+  "title": "Control -- same bay, walkway respected",
+  "path": "control_walkway_discipline.mp4",
+  "duration_s": 10.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-03 / BAY-3",
+  "scene": {
+    "area_type": "warehouse",
+    "lighting": "typical_indoor",
+    "surface": "dry_clear"
+  },
+  "hazards": [],
+  "notes": "Matched control for blind_corner_struck_by. Everything a detector would key on is present -- forklift, pillar, workers, low-vis -- but nobody leaves the walkway, so a correct system stays quiet."
+}

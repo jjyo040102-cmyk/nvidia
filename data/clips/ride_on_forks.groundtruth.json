@@ -1,0 +1,34 @@
+{
+  "clip_id": "ride_on_forks",
+  "title": "Worker carried on the elevated tines",
+  "path": "ride_on_forks.mp4",
+  "duration_s": 11.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-06 / AISLE-B",
+  "scene": {
+    "area_type": "warehouse",
+    "lighting": "typical_indoor",
+    "surface": "dry_clear"
+  },
+  "hazards": [
+    {
+      "type": "worker_riding_on_forks",
+      "t_start": 4.0,
+      "t_impact": 8.0,
+      "anticipatable_s": 4.0,
+      "severity": 5,
+      "entities": [
+        "P1",
+        "P2",
+        "FL1"
+      ],
+      "description": "A worker is carried on the tines at 0.95 m with no platform and no tether while the truck travels toward the camera along x=1.10. From 4.0 s a second worker crosses the same lane at 3.30 m; the elevated load path and the pedestrian meet at about 8.0 s, so both a fall from height and a struck-by are live on the same trajectory."
+    }
+  ],
+  "notes": "Two exposures, one cause: stopping the travel ends both. Tests whether the agent reports the riding violation rather than only the converging paths."
+}

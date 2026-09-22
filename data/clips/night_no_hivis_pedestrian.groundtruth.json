@@ -1,0 +1,33 @@
+{
+  "clip_id": "night_no_hivis_pedestrian",
+  "title": "Night shift, no hi-vis, shared route",
+  "path": "night_no_hivis_pedestrian.mp4",
+  "duration_s": 10.0,
+  "fps": 12,
+  "resolution": [
+    1280,
+    720
+  ],
+  "synthetic": true,
+  "camera_label": "CAM-14 / YARD-N",
+  "scene": {
+    "area_type": "vehicle_yard",
+    "lighting": "night_artificial",
+    "surface": "dry_clear"
+  },
+  "hazards": [
+    {
+      "type": "struck_by",
+      "t_start": 3.9,
+      "t_impact": 6.6,
+      "anticipatable_s": 2.7,
+      "severity": 4,
+      "entities": [
+        "P1",
+        "FL1"
+      ],
+      "description": "Elevated load restricts the operator's forward view while a worker without hi-vis crosses the travel route at 4.1 m under sodium-only lighting."
+    }
+  ],
+  "notes": "Raised load plus absent hi-vis: the model must combine two weak cues."
+}
