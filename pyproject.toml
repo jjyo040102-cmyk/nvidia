@@ -12,11 +12,17 @@ license = { file = "LICENSE" }
 authors = [{ name = "Vigil" }]
 keywords = ["nvidia", "nebius", "physical-ai", "safety", "agent", "cosmos", "nemotron"]
 dependencies = [
-  "fastapi>=0.115",
+  # FastAPI 0.116+ currently resolves to Starlette 1.x, whose TestClient/API
+  # compatibility changed underneath this project. Keep the tested 0.115 line
+  # until the application and test client are migrated together.
+  "fastapi>=0.115,<0.116",
+  # Starlette 0.46 references an AnyIO alias that AnyIO 4.10+ deprecates;
+  # warnings are errors in this project's test suite.
+  "anyio>=4.8,<4.10",
   "uvicorn[standard]>=0.32",
   "pydantic>=2.9",
   "pydantic-settings>=2.6",
-  "httpx>=0.27",
+  "httpx>=0.27,<0.29",
   "numpy>=1.26",
   # >=12 ships inline types (py.typed). Third-party types-Pillow stubs are frozen at the
   # 10.2 API and shadow them, which reports errors against signatures we do not run.
